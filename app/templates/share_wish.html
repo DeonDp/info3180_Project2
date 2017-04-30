@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block css %} 
+ <style>
+    body {
+        font-family: "Tahoma","sans-serif";
+        background: url("../../static/images/wishlist.jpg");
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+<form action ="#" method ='POST'>
+    <h1>{{name}} Let's share your wishes with a friend</h1>
+    <h3>Enter your friend's email address</h3>
+    <label for="f_email">share wish with:</label>
+    <input type="text" name="f_emaiL"/><br/>
+    <button>Share</button>
+</form> 
+{% endblock %}

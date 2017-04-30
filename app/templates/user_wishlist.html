@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block css %} 
+ <style>
+    body {
+        font-family: "Tahoma","sans-serif";
+        background: url("../../../../static/images/wishlist.jpg");
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+<form action ="#" method ='POST'>
+    <h1>Welcome {{name}}</h1>
+    <h3>Enter website url to see Wish images</h3>
+    <label for="WishURL">Wish Site:</label>
+    <input type="text" name="WishURL"/><br/>
+    <button>MyWishSite</button>
+</form> 
+<div ng-app="myApp" ng-controller="myCtrl" > 
+    <ul>
+      <li ng-repeat="x in result track by $index" >
+          <img src= {{x}} />
+      </li>
+    </ul>
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope, $http) {
+      $http.get("/api/thumbnails").then(function(response) {
+          $scope.result = response.data.thumbnails;
+      });
+    });
+</script>
+{% endblock %}

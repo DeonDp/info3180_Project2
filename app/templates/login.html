@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block css %} 
+ <style>
+    body {
+        font-family: "Tahoma","sans-serif";
+        background: url("../../app/static/images/wishlist.jpg");
+    }
+    input {
+        display:inline-block;
+    }
+    
+    form {
+        background-image: inherit;
+        background-color: #434DFC;
+        background-position: -457px -190px ;
+        border: 6px solid #835C3B;
+        padding: 20px;
+        width: 360px;
+        margin:  190px auto;
+        color: #835C3B;
+    }
+    form div{
+        text-align: center;
+    }
+    #password {
+        margin-left: 11px;
+    }
+    
+    #button {
+        background-color: #835C3B;
+    }
+    
+    span {
+        font-family:"Brush Script MT","Vivaldi","sans-serif";
+        font-weight: bold;
+        font-size: 70px;
+        text-align:center;
+    }
+    h1{
+        color: #835C3B;
+    }
+    .area{
+        padding-top: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+<body>
+    <div class="area">
+        <h1><strong>Dreamlist</strong><br>wishlist management System</h1>
+    </div>
+    <form  action="#" method="post">
+        <h3>Enter credentials below to login to Wishlist app</h3>
+        <label for="E-mail">e-mail: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+        <input type="text" id="E-mail" name="E-mail"/><br/><br/>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password"/><br/><br/>
+        <input type="submit" value="Login" name="submit" id="submit"/>
+    </form>
+</body>
+{% endblock %}
