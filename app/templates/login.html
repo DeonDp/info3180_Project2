@@ -9,11 +9,13 @@
     input {
         display:inline-block;
     }
-    
     form {
-        background-image: inherit;
+        position: relative;
+        left: 100px;
+        top: -150px;
+        background-image: url("../../static/images/wishlist.jpg");
         background-color: #434DFC;
-        background-position: -457px -190px ;
+        background-position: -580px -190px ;
         border: 6px solid #835C3B;
         padding: 20px;
         width: 360px;
@@ -40,8 +42,12 @@
     h1{
         color: #835C3B;
     }
+    h3{
+        color: #835C3B;
+    }
     .area{
-        padding-top: 10px;
+        padding-top: 150px;
+        padding-left: 500px;
     }
 </style>
 {% endblock %}
@@ -49,7 +55,8 @@
 {% block main %}
 <body>
     <div class="area">
-        <h1><strong>Dreamlist</strong><br>wishlist management System</h1>
+        <h1><strong>Dreamlist</strong></h1>
+        <h3>wishlist management System</h3>
     </div>
     <form  action="#" method="post">
         <h3>Enter credentials below to login to Wishlist app</h3>

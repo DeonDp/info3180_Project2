@@ -5,6 +5,20 @@
     body {
         font-family: "Tahoma","sans-serif";
         background: url("../../static/images/wishlist.jpg");
+        color: #835C3B;
+    }
+     form {
+        position: relative;
+        left: 100px;
+        top: 0px;
+        background-image: url("../../static/images/wishlist.jpg");
+        background-color: #434DFC;
+        background-position: -595px -190px ;
+        border: 6px solid #835C3B;
+        padding: 20px;
+        width: 360px;
+        margin:  190px auto;
+        color: #835C3B;
     }
 </style>
 {% endblock %}
@@ -13,14 +27,15 @@
 <form action ="#" method ='POST'>
     <h3>Sign up for Wishlist app here</h3>
     <label for="firstname">Firstname:</label>
-    <input type="text" name="firstname"/><br/>
+    <input type="text" name="firstname"/><br/><br>
     <label for="lastname">Lastname:</label>
-    <input type="text" name="lastname"/><br/>
-    <label for="E-mail">E-mail:</label>
-    <input type="text" name="E-mail"/><br/>
+    <input type="text" name="lastname"/><br/><br>
+    <label for="E-mail">E-mail:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+    <input type="text" name="E-mail"/><br/><br>
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password" placeholder="Password" required/><br/>
-    <label for="cpassword">Confirm Password:</label>
+    <input type="password" id="password" name="password" placeholder="Password" required/><br/><br>
+    <label for="cpassword">Confirm Password:</label><br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
     <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" required/><br/>
     <button>Submit</button>
 </form> 
